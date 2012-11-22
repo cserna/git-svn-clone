@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCRIPTPATH=`dirname $0`
+
+# Check out externals in the bundle root directory.
+$SCRIPTPATH/git-svn-clone-externals
+
+# Check out externals in all subdirectories where there are svn:externals on a directory.
+find . -type l -maxdepth 1 -exec bash -c "cd {}; $SCRIPTPATH/git-svn-clone-externals" \;
+
+# Set symlink for mylib
+cd .git_externals
+ln -s ../mylib/ mylib
+cd ..
+
