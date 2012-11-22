@@ -82,3 +82,11 @@ Options
 
 - Alexander Artemenko <svetlyak.40wt@gmail.com>
 
+Additional scripts
+==================
+
+* Added scripts that heavily depend on my Subversion layout and makes live
+  easier in my day-to-day work.
+
+- Markus Cserna <git@cserna.at>
+
